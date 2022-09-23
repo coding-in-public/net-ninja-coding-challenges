@@ -1,0 +1,54 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 80px;
+  --toggle-height: 30px;
+}
+
+body {
+  background: #333;
+  display: grid;
+  place-items: center;
+}
+
+/* solution styles */
+
+.toggle {
+  position: relative;
+}
+
+.switch {
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+  background-color: var(--off);
+  border-radius: 100vmax;
+  pointer-events: none;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(.2rem, -50%);
+  height: calc(var(--toggle-height) * .8);
+  width: calc(var(--toggle-height) * .8);
+  background-color: #fff;
+  border-radius: 100vmax;
+}
+
+[type="checkbox"]:checked+.switch {
+  background-color: var(--on);
+}
+
+[type="checkbox"]:checked+.switch::after {
+  transform: translate(0, -50%);
+  right: .2rem;
+}

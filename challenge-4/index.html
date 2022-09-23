@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Only Tabs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="tabs">
+    <div class="buttons">
+      <a
+        href="#panel-1"
+        class="tab"
+        aria-controls="panel-1"
+        aria-expanded="true"
+        id="tab-1"
+      >
+      Product Details
+      </a>
+      <a
+        href="#panel-2"
+        class="tab"
+        aria-controls="panel-2"
+        aria-expanded="false"
+        id="tab-2"
+      >
+      Delivery Info
+      </a>
+      <a
+        href="#panel-3"
+        class="tab"
+        aria-controls="panel-3"
+        aria-expanded="false"
+        id="tab-3"
+      >
+      Returns Info
+      </a>
+    </div>
+
+    <div class="panels">
+      <article
+        class="panel"
+        id="panel-1"
+        aria-labelledby="tab-1"
+      >
+        <h2>Product Details</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sint dolor adipisci velit sunt voluptatum pariatur ex sit omnis quibusdam animi aliquid vitae maiores repellat? Quasi, commodi. Dolorem dolor quae eligendi quis laudantium culpa quasi! asdfasdf</p>
+      </article>
+      <article
+        class="panel"
+        id="panel-2"
+        aria-labelledby="tab-2"
+      >
+        <h2>Delivery Info</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sint dolor adipisci velit sunt voluptatum pariatur ex sit omnis quibusdam animi aliquid vitae maiores repellat? Quasi, commodi. Dolorem dolor quae eligendi quis laudantium culpa quasi!</p>
+      </article>
+      <article
+        class="panel"
+        id="panel-3"
+        aria-labelledby="tab-3"
+      >
+        <h2>Returns Info</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sint dolor adipisci velit sunt voluptatum pariatur ex sit omnis quibusdam animi aliquid vitae maiores repellat? Quasi, commodi. Dolorem dolor quae eligendi quis laudantium culpa quasi!</p>
+      </article>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* base styles */
+
+body {
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: Verdana;
+}
+
+form {
+  background: white;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+form .field {
+  display: flex;
+  align-items: center;
+}
+
+form input {
+  margin: 0 16px;
+  font-size: 0.8em;
+  border: 2px solid #777;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* solution styles */
+
+input:focus {
+  outline-color: #777;
+}
+
+input.valid:focus {
+  outline-color: #73C7AC;
+}
+
+.tick {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+input.valid:focus+.tick {
+  color: #73C7AC;
+  opacity: 1;
+  transform: translateY(0);
+}

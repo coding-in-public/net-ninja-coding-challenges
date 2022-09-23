@@ -1,0 +1,130 @@
+/* start styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+}
+
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* solution styles */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+
+h1 {
+  color: white;
+}
+
+#menuBtn {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  padding: 0;
+}
+
+.nav-icon {
+  display: grid;
+  gap: .4rem;
+  pointer-events: none;
+}
+
+span {
+  height: 3px;
+  width: 32px;
+  display: block;
+  border-radius: .1rem;
+  background-color: #fff;
+}
+
+#navArea {
+  position: absolute;
+  background-color: #26262659;
+  z-index: 1000;
+  inset: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+nav {
+  padding: 5rem 2rem 2rem;
+  background-color: #262626;
+  box-shadow: 2px 0 2rem #262626;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 200px;
+}
+
+.nav-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#menuBtn,
+.nav-link {
+  box-shadow: 0 0 0 -.2em #444,
+    0 0 0 -.4em #bbb;
+  padding: .2em;
+  border-radius: .2em;
+}
+
+#menuBtn:focus,
+.nav-link:focus {
+  outline: none;
+}
+
+#menuBtn:focus-visible,
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 .2em #444,
+    0 0 0 .3em #bbb;
+}
+
+#menuBtn[aria-expanded="true"]+#navArea {
+  transform: translate3d(0, 0, 0);
+}
+
+.span1,
+.span3 {
+  transition: transform 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#menuBtn[aria-expanded="true"] .span1 {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+#menuBtn[aria-expanded="true"] .span2 {
+  opacity: 0;
+}
+
+#menuBtn[aria-expanded="true"] .span3 {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* open state */
+
+
+
+/* transitions */
